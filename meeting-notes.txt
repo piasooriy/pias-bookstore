@@ -1,0 +1,9 @@
+||2023-03-28||
+Attendees: Camilla, Effie & Pia
+Notes: Today we wanted understand what our
+mvp should be, and we want to work on making the
+"datamodellering". We also want to make sure 
+that the _studio part is finished, so that we can put 
+in values. Effie is going to be making the 
+prototype in Figma. 
+
