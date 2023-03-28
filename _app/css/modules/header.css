@@ -1,7 +1,8 @@
 .header {
+	background-color: var(--header-color);
 }
 
-.header__navigation {
+/*.header__navigation {
 }
 
 .header__navigation--visible {
