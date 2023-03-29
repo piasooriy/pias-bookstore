@@ -1,5 +1,7 @@
 .header {
+	grid-column: 1 / 13;
 	background-color: var(--header-color);
+	width: 100vw;
 }
 
 /*.header__navigation {

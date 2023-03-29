@@ -1,0 +1,45 @@
+.book-list {
+	display: grid;
+	grid-template-columns: 1, minmax(0,1fr);
+	grid-column: 1 / 13;
+	grid-column-gap: 2vw;
+	padding: 2vw 3vw;
+	width: 100vw;
+	background-color: var(--background-color);
+}
+
+.book__card {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	/* background-color: orange; */
+	margin-bottom: 1rem;
+}
+
+.book__cover-box {
+	width: 100%;
+	height: 100%;
+	/* background-color: pink; */
+}
+
+.book-cover {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	object-fit: cover;
+}
+
+.book-title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2rem;
+	padding: 0 1rem 0 1rem;
+}
+
+.book__card {
+	padding:0.5rem 1rem;
+}
+
+.author__name {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1.5rem;
+}
