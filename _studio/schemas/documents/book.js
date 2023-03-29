@@ -28,6 +28,13 @@ export default {
 			name: 'cover',
 			type: 'image',
 			validation: rule => rule.required(),
+			fields: [
+				{ 
+				  name: 'alt',
+				  type: 'string',
+				  validation: rule => rule.required()
+				}
+			 ]
 		},
 		{
 			title: 'Price', 
