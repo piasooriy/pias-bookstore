@@ -16,7 +16,14 @@ export default {
 		{
 			title: 'Image',
 			name: 'image',
-			type: 'image'
+			type: 'image',
+			fields: [
+				{ 
+				  name: 'alt',
+				  type: 'string',
+				  validation: rule => rule.required()
+				}
+			 ]
 		},
 		{
 			title: 'Description', 
