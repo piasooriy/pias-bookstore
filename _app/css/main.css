@@ -5,4 +5,5 @@
 @import './fonts.css';
 
 @import './modules/header.css';
-@import './modules/book-card.css'
+@import './modules/book-card.css';
+@import './modules/footer.css';
