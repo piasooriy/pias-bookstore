@@ -1,7 +1,14 @@
 .header {
 	grid-column: 1 / 13;
+	justify-content: center;
 	background-color: var(--header-color);
+	color: #402743;
 	width: 100vw;
+	padding: 2rem;
+	
+	font-family: 'Jacques Francois Shadow', 'cursive';
+	font-size: 3rem;
+	text-align: center;
 }
 
 /*.header__navigation {
