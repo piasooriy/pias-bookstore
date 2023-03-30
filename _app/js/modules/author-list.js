@@ -56,7 +56,7 @@ export default async function authorList(){
 
 			
 
-			return authorListContainer();
+			return authorListContainer;
 		}
 
 		function renderHTML(){
