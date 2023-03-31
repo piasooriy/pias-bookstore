@@ -1,3 +1,17 @@
 .books {
 	grid-column: 1 / 13;
+	background-color: #DAD6D6;
+	padding: 2vw 3vw 1vw 3vw;
+}
+
+.book-list__input {
+	font-size: 1rem;
+}
+
+.book-list__search-button {
+ background-color: #D896A1;
+}
+
+.book-list__empty-search {
+	background-color: #D896A1;
 }
