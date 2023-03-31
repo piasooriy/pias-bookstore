@@ -8,6 +8,7 @@ export default async function bookList (){
 		"author": author->{firstName, lastName},
 		price,
 		
+		
 	}`;
 
 
@@ -25,6 +26,7 @@ export default async function bookList (){
 			const bookCover = document.createElement('img');
 			const authorName = document.createElement('div');
 			const bookPrice = document.createElement('div');
+			
 
 
 			bookListContainer.appendChild(bookCoverBox);
@@ -34,12 +36,16 @@ export default async function bookList (){
 			bookCard.appendChild(authorName);
 			bookCard.appendChild(bookPrice);		
 			
+						
+			
+
 			bookCard.className= 'book__card';
 			bookCoverBox.className= 'book__cover-box';
 
 
 			bookCover.className= 'book-cover';
 			bookCover.src = book.bookCover;
+			bookCover.alt = book.bookAlt;
 
 			bookTitle.className= 'book-title';
 			bookTitle.innerText = book.title;
