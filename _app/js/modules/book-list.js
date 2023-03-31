@@ -45,11 +45,14 @@ export default async function bookList (){
 			bookTitle.innerText = book.title;
 
 			authorName.className= 'author__name';
-			authorName.innerText = book.author;
-
+			authorName.innerText = `
+				${ book.author && book.author.firstName } ${book.author && book.author.lastName }
+				` ;
+				
 			bookPrice.className= 'book__price';
 			bookPrice.innerText = book.price;
 			
+
 		}
 
 		return bookListContainer;
