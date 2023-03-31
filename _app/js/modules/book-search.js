@@ -42,7 +42,8 @@ export default async function SearchList() {
 		const query = `*[_type == 'book' && title match $bookTitle + '*'] {
 			title,
 			"bookCover": cover.asset->url,
-			"author": author->lastName,
+			"bookAlt": cover.alt,
+			"author": author->{firstName, lastName},
 			price,
 		}`;
 
@@ -64,11 +65,11 @@ export default async function SearchList() {
 
 		for (const book of bookResults) {
 			const bookCard = document.createElement('div');
+			const bookCoverBox = document.createElement('figure')
 			const bookTitle = document.createElement('figcaption');
 			const bookCover = document.createElement('img');
 			const authorName = document.createElement('div');
 			const bookPrice = document.createElement('div');
-			const bookCoverBox = document.createElement('figure')
 
 
 			bookListContainer.appendChild(bookCoverBox);
