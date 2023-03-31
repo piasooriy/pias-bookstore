@@ -1,3 +1,3 @@
-import authorList from "./modules/author-list.js";
+import AuthorList from "./modules/author-list.js";
 
-authorList();
+AuthorList();

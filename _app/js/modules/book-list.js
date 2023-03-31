@@ -1,6 +1,6 @@
 import { sanity } from '../sanity.js';
 
-export default async function bookList (){
+export default async function BookList (){
 	const query = `*[_type == 'book']{
 		title,
 		"bookCover": cover.asset->url,

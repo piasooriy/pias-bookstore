@@ -1,6 +1,6 @@
 import { sanity } from "../sanity.js";
 
-export default async function authorList(){
+export default async function AuthorList(){
 	const query = `*[_type == 'author']{
 		"name": {
 			firstName, 
