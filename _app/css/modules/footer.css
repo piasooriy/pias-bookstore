@@ -4,7 +4,7 @@ footer {
 	display: grid;
 	grid-column: 1 / 13;
 	grid-row: 13 / 13;
-	background-color: var(--header-color);
+	background-color: var(--primary-color);
 	color: black;
 	text-align: center;
 	font-family: 'Courier New', Courier, monospace;

@@ -1,7 +1,24 @@
 :root {
---header-color: #D896A1;
---background-color: #DAD6D6;
 
---font-color: black;
+	/*Font for title, text and footer.*/
+	--font-logo-text: 'Jacques Francois Shadow', 'cursive';
+	--font-body-text: 'Inria Serif', 'serif'; 
+	--font-footer-text: 'Courier New', Courier, monospace;
 
+	/*Fonts sizes*/
+	--main-logo-fontsize: 3rem;
+	--secondary--title-fontsize: 1.5rem;
+	--bodytext-size: 1rem;
+	--bodytext-small-text: 0.5rem;
+
+	/* Colors */
+	--primary-color: #D896A1;
+	--secondary-color: #DAD6D6;
+	--book-card-background: white;
+	--main-logo-color: #402743; 
+	--text-color: black; 
+	--text-pricing-color: red; 
+
+	/*Sizes*/
+	--padding-header: 2rem;
 }
