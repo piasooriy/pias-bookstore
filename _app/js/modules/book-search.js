@@ -7,11 +7,14 @@ export default async function SearchList() {
 	const bookListInput = document.querySelector('.book-list__input');
 	const bookListResults = document.querySelector('.book-list__results');
 	const bookListSearchButton = document.querySelector('.book-list__search-button');
+	const bookListEmptySearchButton = document.querySelector('.book-list__empty-search');
 
 	bookListSearchButton.addEventListener('click', handleSearchButtonClick);
 	bookListInput.addEventListener('keyup', handleSearchInputKeyup);
 
+	bookListEmptySearchButton.addEventListener('click', handleEmptySearchButtonClick);
 
+	// Click or 'enter' to search
 	function handleSearchButtonClick() {
 		setBookSearchText(bookListInput);
 		fetchBooks();
@@ -23,6 +26,13 @@ export default async function SearchList() {
 			fetchBooks();
 		}
 	}
+
+	// Click to empty search-field
+	function handleEmptySearchButtonClick() {
+		bookListInput.value = '';
+		setBookSearchText = '';
+	}
+
 
 	function setBookSearchText(input) {
 		bookSearchText = input.value;
@@ -71,7 +81,6 @@ export default async function SearchList() {
 			bookCard.className= 'book__card';
 			bookCoverBox.className= 'book__cover-box';
 
-
 			bookCover.className= 'book-cover';
 			bookCover.src = book.bookCover;
 
@@ -93,5 +102,4 @@ export default async function SearchList() {
 		bookListResults.innerHTML = '';
 		bookListResults.appendChild(bookListContainer);
 	}
-
 }
