@@ -15,14 +15,12 @@ export default async function SearchList() {
 	function handleSearchButtonClick() {
 		setBookSearchText(bookListInput);
 		fetchBooks();
-		renderHTML();
 	}
 
 	function handleSearchInputKeyup(event) {
 		if (event.key === 'Enter') {
 			setBookSearchText(event.target);
 			fetchBooks();
-			renderHTML();
 		}
 	}
 
@@ -44,6 +42,8 @@ export default async function SearchList() {
 
 		bookResults = await sanity.fetch(query, params);
 		console.log(bookResults);
+
+		renderHTML();
 	}
 
 	function createBookListContainerDOM() {
