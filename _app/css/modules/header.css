@@ -1,10 +1,10 @@
 .header {
 	grid-column: 1 / 13;
 	justify-content: center;
-	background-color: var(--header-color);
-	color: #402743;
+	background-color: var(--primary-color);
+	color: var(--main-logo-color);
 	width: 100vw;
-	padding: 2rem;
+	padding: var(--padding-header);
 	
 	font-family: 'Jacques Francois Shadow', 'cursive';
 	font-size: 3rem;
