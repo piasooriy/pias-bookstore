@@ -9,8 +9,9 @@ export default async function authorList(){
 		  dateOfBirth, 
 		  dateOfPassing, 
 		  description, 
-		  "altText": image.alt,  
+		  "AltText": image.alt,  
 		  "Picture": image.asset->url,
+		  "Book": *[_type == 'book' && references(^._id)].title,   
 		}`;
 
 		const authors = await sanity.fetch(query);
@@ -28,6 +29,7 @@ export default async function authorList(){
 				const authorBirthDate = document.createElement('div');
 				const authorPassingDate = document.createElement('div');
 				const authorName = document.createElement('figcaption');
+				const authorBook= document.createElement('div')
 				
 				authorListContainer.appendChild(authorCard);
 				authorListContainer.appendChild(authorbox);
@@ -36,6 +38,7 @@ export default async function authorList(){
 				authorCard.appendChild(authorPassingDate);
 				authorbox.appendChild(authorName);
 				authorbox.appendChild(authorImage);
+				authorbox.appendChild(authorBook);
 
 
 				authorCard.className = 'author__card';
@@ -43,6 +46,7 @@ export default async function authorList(){
 
 				authorImage.className = 'author__picture';
 				authorImage.src = author.Picture;
+				authorImage.alt = author.AltText;
 
 				authorDescription.className = 'author__description';
 				authorDescription.innerText = author.description;
@@ -52,6 +56,10 @@ export default async function authorList(){
 
 				authorPassingDate.className = 'author__passing-date';
 				authorPassingDate.innerText = author.dateOfPassing;
+
+				authorBook.className = 'author__book';
+				authorBook.innerText = author.Book;
+				console.log(authorBook)
 
 				authorName.className = 'author__name';
 				authorName.innerText = `
