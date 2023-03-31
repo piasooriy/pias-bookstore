@@ -17,9 +17,18 @@
 		</header>
 
 		<div class="books">
+
 			<div class="book-list__search">
-				<input class="book-list__input" type="text" placeholder="Search by title">
+				<input 
+				class="book-list__input" 
+				id="search"
+				type="text"
+				name="search"
+				placeholder="Search by title"
+				autocomplete="on"
+				>
 				<button class="book-list__search-button">Search</button>
+				<button class="book-list__empty-search">X</button>
 			</div>
 
 			<div class="book-list__results"></div>
