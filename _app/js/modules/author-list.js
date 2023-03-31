@@ -47,14 +47,18 @@ export default async function authorList(){
 				authorDescription.className = 'author__description';
 				authorDescription.innerText = author.description;
 
-				authorBirthDate.className = 'author__irth-date';
+				authorBirthDate.className = 'author__birth-date';
 				authorBirthDate.innerText = author.dateOfBirth;
 
 				authorPassingDate.className = 'author__passing-date';
 				authorPassingDate.innerText = author.dateOfPassing;
+
+				authorName.className = 'author__name';
+				authorName.innerText = `
+				${author.name.firstName}
+				${author.name.lastName}`;
 			}
 
-			
 
 			return authorListContainer;
 		}
