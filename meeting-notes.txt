@@ -1,5 +1,5 @@
 ||2023-03-28||
-Attendees: Camilla, Effie & Pia
+Attendees: Camilla, Effie && Pia
 Notes: Today we wanted understand what our
 mvp should be, and we want to work on making the
 "datamodellering". We also want to make sure 
@@ -7,3 +7,20 @@ that the _studio part is finished, so that we can put
 in values. Effie is going to be making the 
 prototype in Figma. 
 
+
+||2023-03-30||
+Atttendees: Effie, Camilla && Pia
+Notes: Today we went through what we did on wednesday and thursday. 
+*Effie-> was dying, but also Imported fonts, made the header module 
+and made the footer module. Wasn't sure of implementation of grid for footer, 
+put it in grid-rows(just for footer) but it works. 
+*Camilla->made a search-function(module), and she has been bugfixing for Pia, 
+also merging everybodys pull-requests.
+*Pia->made author-list, launched on netlify, allowed cors-origin. 
+
+Plans: 
+*Effie: make figma for author, work on variables, 
+*Camilla: add empty search function
+*Pia: Minor bug-fix in author module, and add books(title)
+**Together: Add variables, look at how to just get 
+the search input out in html, and not all the booklists. 
