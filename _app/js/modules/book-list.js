@@ -5,7 +5,7 @@ export default async function bookList (){
 		title,
 		"bookCover": cover.asset->url,
 		"bookAlt": cover.alt,
-		"author": author->lastName,
+		"author": author->{firstName, lastName},
 		price,
 		
 	}`;
