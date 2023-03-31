@@ -4,6 +4,7 @@ export default async function bookList (){
 	const query = `*[_type == 'book']{
 		title,
 		"bookCover": cover.asset->url,
+		"bookAlt": cover.alt,
 		"author": author->lastName,
 		price,
 		
@@ -15,16 +16,15 @@ export default async function bookList (){
 
 	function createBookListContainerDOM(){
 		const bookListContainer = document.createElement('div');
-
 		bookListContainer.className= 'book-list';
 
 		for (const book of books) {
 			const bookCard = document.createElement('div');
+			const bookCoverBox = document.createElement('figure')
 			const bookTitle = document.createElement('figcaption');
 			const bookCover = document.createElement('img');
 			const authorName = document.createElement('div');
 			const bookPrice = document.createElement('div');
-			const bookCoverBox = document.createElement('figure')
 
 
 			bookListContainer.appendChild(bookCoverBox);
