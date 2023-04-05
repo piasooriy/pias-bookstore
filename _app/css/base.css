@@ -10,3 +10,8 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+menu {
+	text-decoration: none;
+	list-style: none;
+}

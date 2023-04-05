@@ -11,6 +11,25 @@
 	text-align: center;
 }
 
+.header__page {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	letter-spacing: 0.3rem;
+	padding-top: var(--padding-header);
+	font-size: var(--secondary--title-fontsize);
+}
+
+.header__page a:hover {
+	text-decoration: underline;
+}
+
+.header__page a:visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
 /*.header__navigation {
 }
 
