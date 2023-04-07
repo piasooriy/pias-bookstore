@@ -15,7 +15,7 @@ export default async function bookList () {
 		const bookListContainer = document.createElement('div');
 			bookListContainer.className = 'book-list';
 
-		const searchContainer = document.querySelector('.book-list__search');
+		const searchContainer = document.createElement('div');
 			searchContainer.className = 'book-list__search';
 
 		const searchInput = document.createElement('input');
@@ -35,13 +35,15 @@ export default async function bookList () {
 			emptySearchButton.innerText = 'X';
 
 		searchContainer.appendChild(searchInput);
-		searchContainer.appendChild(searchButton);
 		searchContainer.appendChild(emptySearchButton);
+		searchContainer.appendChild(searchButton);
+
+		bookListContainer.appendChild(searchContainer);
 
 		const bookResultsContainer = document.createElement('div');
 			bookResultsContainer.className = 'book-list__results';
+			bookListContainer.appendChild(bookResultsContainer);
 
-		searchContainer.appendChild(bookResultsContainer);
 
 		function updateBookList(searchQuery) {
 			bookResultsContainer.innerHTML = '';
@@ -91,7 +93,7 @@ export default async function bookList () {
 			
 						authorName.className= 'author__name';
 						authorName.innerText = `
-							${ book.author && book.author.firstName } ${book.author && book.author.lastName }
+							${book.author && book.author.firstName } ${book.author && book.author.lastName }
 							` ;
 							
 						bookPrice.className= 'book__price';
@@ -148,5 +150,4 @@ export default async function bookList () {
 	}
 
 	renderHTML();
-	
 }

@@ -1,9 +1,11 @@
-.book-list {
+/* Mobile first */
+
+.book-list__results {
 	display: grid;
-	grid-template-columns: 1, minmax(0,1fr);
+	grid-template-columns: repeat(1, minmax(0,1fr));
 	grid-column: 1 / 13;
 	grid-column-gap: 2vw;
-	padding: 2vw 3vw;
+	/* padding: 2vw 3vw; */
 	width: 100vw;
 	background-color: var(--background-color);
 }
@@ -11,6 +13,7 @@
 .book__card {
 	display: flex;
 	width: 100%;
+	padding: 0.5rem 1rem;
 	flex-direction: column;
 	/* background-color: orange; */
 	margin-bottom: 1rem;
@@ -30,16 +33,27 @@
 }
 
 .book-title {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 2rem;
-	padding: 0 1rem 0 1rem;
-}
-
-.book__card {
-	padding:0.5rem 1rem;
+	font-family: var(--font-body-text);
+	font-size: var(--secondary--title-fontsize);
+	/* padding: 0 1rem 0 1rem; */
 }
 
 .author__name {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 1.5rem;
+	font-family: var(--font-body-text);
+	font-size: var(--secondary--title-fontsize);
+}
+
+/* Tablet */
+@media screen and (min-width: 480px) {
+	.book-list__results {
+		grid-template-columns: repeat(2, minmax(0,1fr));
+	}
+}
+
+
+/* Desktop */
+@media screen and (min-width: 768px){
+	.book-list__results {
+		grid-template-columns: repeat(4, minmax(0,1fr));
+	}
 }
