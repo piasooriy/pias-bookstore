@@ -1,17 +1,46 @@
-.books {
-	grid-column: 1 / 13;
-	background-color: #DAD6D6;
-	padding: 2vw 3vw 1vw 3vw;
+.book-list__search {
+	width: 100%;
+	display: flex;
+	justify-content: left;
+	padding: 1rem;
+	gap: 0.5rem;
 }
 
-.book-list__input {
-	font-size: 1rem;
+.book-list__search-input {
+	font-size: 0.85rem;
+	width: 80%;
+	height: 1.8rem;
+	border-radius: 8px;
+	padding: 0.2rem;
+	border-style: none;
 }
 
 .book-list__search-button {
- background-color: #D896A1;
+	background-color: var(--primary-color);
+	border-radius: 8px;
+	border-style: none;
+	padding: 0.2rem;
+	cursor: pointer;
 }
 
-.book-list__empty-search {
-	background-color: #D896A1;
+.book-list__empty-search-button {
+	background-color: var(--primary-color);
+	border-radius: 8px;
+	border-style: none;
+	padding: 0.4rem;
+	cursor: pointer;
+}
+
+/* Tablet */
+@media screen and (min-width: 480px) {
+	.book-list__search {
+		width: 57%;
+	}
+}
+
+/* Desktop */
+@media screen and (min-width: 768px) {
+	.book-list__search {
+		width: 50%;
+	}
 }
