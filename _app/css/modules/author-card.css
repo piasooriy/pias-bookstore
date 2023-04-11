@@ -1,0 +1,72 @@
+.author-list{
+	display: grid;
+	grid-template-columns: repeat(1, minmax(0,1fr));
+	grid-column: 1/13;
+	grid-column-gap: 2vw;
+	width: 100vw;
+	background-color: var(--secondary-color);
+}
+
+.author__card {
+	/* background-color: pink; */
+	margin-top: 2rem;
+	display: flex;
+	width: 100%;
+	height: 98%;
+	padding: 0.5rem;
+	flex-direction: column;
+	background-color: var(--book-card-background);
+	margin-bottom: 2rem;
+	
+}
+
+.author__cover-box{
+	/* background-color: red; */
+	width: 100%;
+	height: 100%;
+}
+
+
+.author__picture{
+	/* background-color: aqua; */
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.author__description{
+	/* background-color: blueviolet; */
+
+}
+
+.author__book{
+	/* background-color: chartreuse; */
+	font-family: var(--font-body-text);
+	font-size: var(--bodytext-medium-text);
+}
+
+
+.author__birth-date{
+	/* background-color: blue; */
+}
+
+
+.author__name-full{
+	/* background-color:paleturquoise; */
+	font-family: var(--font-body-text);
+	font-size: var(--secondary--title-fontsize);
+}
+
+/* Tablet */
+@media screen and (min-width: 480px) {
+	.author-list {
+		grid-template-columns: repeat(2, minmax(0,1fr));
+	}
+}
+
+
+/* Desktop */
+@media screen and (min-width: 768px){
+	.author-list {
+		grid-template-columns: repeat(4, minmax(0,1fr));
+	}
+}

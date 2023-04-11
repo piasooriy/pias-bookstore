@@ -23,7 +23,7 @@ export default async function authorList(){
 
 			for (const author of authors) {
 				const authorCard = document.createElement('div');
-				const authorbox = document.createElement('figure');
+				const authorBox = document.createElement('figure');
 				const authorImage = document.createElement('img');
 				const authorDescription = document.createElement('div');
 				const authorBirthDate = document.createElement('div');
@@ -32,17 +32,17 @@ export default async function authorList(){
 				const authorBook= document.createElement('div')
 				
 				authorListContainer.appendChild(authorCard);
-				authorListContainer.appendChild(authorbox);
+				authorBox.appendChild(authorName);
+				authorBox.appendChild(authorImage);
+				authorCard.appendChild(authorBox);
 				authorCard.appendChild(authorDescription);
 				authorCard.appendChild(authorBirthDate);
 				authorCard.appendChild(authorPassingDate);
-				authorbox.appendChild(authorName);
-				authorbox.appendChild(authorImage);
-				authorbox.appendChild(authorBook);
+				authorCard.appendChild(authorBook);
 
 
 				authorCard.className = 'author__card';
-				authorbox.classname = 'author__cover-box';
+				authorBox.classname = 'author__cover-box';
 
 				authorImage.className = 'author__picture';
 				authorImage.src = author.Picture;
@@ -61,7 +61,7 @@ export default async function authorList(){
 				authorBook.innerText = author.Book;
 				console.log(authorBook)
 
-				authorName.className = 'author__name';
+				authorName.className = 'author__name-full';
 				authorName.innerText = `
 				${author.name.firstName}
 				${author.name.lastName}`;
