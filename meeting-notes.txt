@@ -9,7 +9,7 @@ prototype in Figma.
 
 
 ||2023-03-30||
-Atttendees: Effie, Camilla && Pia
+Attendees: Effie, Camilla && Pia
 Notes: Today we went through what we did on wednesday and thursday. 
 *Effie-> was dying, but also Imported fonts, made the header module 
 and made the footer module. Wasn't sure of implementation of grid for footer, 
@@ -24,3 +24,17 @@ Plans:
 *Pia: Minor bug-fix in author module, and add books(title)
 **Together: Add variables, look at how to just get 
 the search input out in html, and not all the booklists. 
+
+
+||2023-04-11||
+Attendees: Effie, Camilla && Pia
+Notes: Today we went through what we did during the easter break. 
+* Effie -> Styled menu buttons. 
+* Camilla -> Optimalized search function, styled bookcards
+* Pia -> been fighting with the filter. 
+
+Plan for the week: 
+*Effie -> Fix header
+*Camilla -> Make click to bookpage
+*Pia -> Style the author page
+*Together -> Style the bookpage
