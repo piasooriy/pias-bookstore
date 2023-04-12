@@ -50,5 +50,21 @@ export default {
 				calendarTodayLabel: 'today',
 			}
 		}
-	]
+	],
+
+	preview: {
+		select: {
+			first_name: 'firstName', 
+			last_name: 'lastName',
+			portrait: 'image',
+		}, 
+
+		prepare: (fields) => {
+			return {
+				title: `${fields.last_name}, ${fields.first_name}`,
+				subtitle: '',
+				media: fields.portrait
+			}
+		}
+	}
 }
