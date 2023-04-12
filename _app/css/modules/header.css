@@ -1,3 +1,5 @@
+/* Mobile first */
+
 .header {
 	grid-column: 1 / 13;
 	justify-content: center;
@@ -7,7 +9,7 @@
 	padding: var(--padding-header);
 	
 	font-family: 'Jacques Francois Shadow', 'cursive';
-	font-size: 3rem;
+	font-size: 2.5rem;
 	text-align: center;
 }
 
@@ -18,7 +20,7 @@
 	align-items: center;
 	letter-spacing: 0.3rem;
 	padding-top: var(--padding-header);
-	font-size: var(--secondary--title-fontsize);
+	font-size: var(--bodytext-small-text);
 }
 
 .header__page a:hover {
@@ -30,8 +32,25 @@
 	text-decoration: underline;
 }
 
-/*.header__navigation {
+/* Tablet */
+@media screen and (min-width: 480px) {
+	.header__page {
+		font-size: var(--bodytext-size);
+	}
+
+	.header {
+		font-size: 2.9rem;
+	}
 }
 
-.header__navigation--visible {
+/* Desktop */
+@media screen and (min-width: 768px){
+	.header__page {
+		font-size: var(--secondary--title-fontsize);
+	}
+	
+	.header {
+		font-size: 3rem;
+	}
 }
+
