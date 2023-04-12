@@ -58,13 +58,12 @@ export default async function authorList(){
 				authorPassingDate.innerText = author.dateOfPassing;
 
 				authorBook.className = 'author__book';
-				authorBook.innerText = author.Book;
+				authorBook.innerText = ` ${author.Book}`;
 				console.log(authorBook)
 
 				authorName.className = 'author__name-full';
 				authorName.innerText = `
-				${author.name.firstName}
-				${author.name.lastName}`;
+				${author.name.firstName} ${author.name.lastName}`;
 			}
 
 

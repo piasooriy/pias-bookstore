@@ -15,7 +15,7 @@
 	height: 98%;
 	padding: 0.5rem;
 	flex-direction: column;
-	background-color: var(--book-card-background);
+	background-color: var(--card-background);
 	margin-bottom: 2rem;
 	
 }
@@ -42,6 +42,7 @@
 	/* background-color: chartreuse; */
 	font-family: var(--font-body-text);
 	font-size: var(--bodytext-medium-text);
+	color: teal;
 }
 
 

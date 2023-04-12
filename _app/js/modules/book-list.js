@@ -32,7 +32,7 @@ export default async function bookList () {
 
 		const emptySearchButton = document.createElement('button');
 			emptySearchButton.className = 'book-list__empty-search-button';
-			emptySearchButton.innerText = 'X';
+			emptySearchButton.innerText = 'Clear';
 
 		searchContainer.appendChild(searchInput);
 		searchContainer.appendChild(emptySearchButton);
@@ -77,7 +77,7 @@ export default async function bookList () {
 						bookCard.appendChild(bookCoverBox);
 						bookCard.appendChild(authorName);
 						bookCard.appendChild(bookPrice);		
-
+						
 						bookCoverBox.appendChild(bookCover);
 						bookCoverBox.appendChild(bookTitle);
 						
