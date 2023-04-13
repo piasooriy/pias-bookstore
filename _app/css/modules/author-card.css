@@ -5,6 +5,7 @@
 	grid-column-gap: 2vw;
 	width: 100vw;
 	background-color: var(--secondary-color);
+	padding: 0.2rem 2rem;
 }
 
 .author__card {
@@ -30,7 +31,10 @@
 .author__picture{
 	/* background-color: aqua; */
 	width: 100%;
+	height: 30rem;
 	margin-bottom: 1rem;
+	overflow: hidden;
+	object-fit: cover;
 }
 
 .author__description{
@@ -55,6 +59,7 @@
 	/* background-color:paleturquoise; */
 	font-family: var(--font-body-text);
 	font-size: var(--secondary--title-fontsize);
+	padding-bottom: 0.8rem;
 }
 
 /* Tablet */
