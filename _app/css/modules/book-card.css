@@ -17,7 +17,7 @@
 	flex-direction: column;
 	background-color:var(--card-background);
 	margin-bottom: 1rem;
-	padding-bottom: 1rem ;
+	padding-bottom: 1rem;
 }
 
 .book__cover-box {
@@ -50,6 +50,10 @@
 	font-size: var(--secondary--title-fontsize);
 }
 
+.book__price {
+	color: rgb(253, 0, 0);
+}
+
 /* Tablet */
 @media screen and (min-width: 480px) {
 	.book-list__results {
@@ -62,5 +66,6 @@
 @media screen and (min-width: 768px){
 	.book-list__results {
 		grid-template-columns: repeat(4, minmax(0,1fr));
+		width: 100%;
 	}
 }
