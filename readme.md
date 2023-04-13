@@ -6,7 +6,7 @@ This repository contains a collection of books sorted by title.
 The MVP is to make a list of the books in Sanity Schema.
 
 ## Deployment
-The project is deployed on [Netlify](https://dreamy-licorice-22c442.netlify.app/) and the source code can be found on [Github](https://github.com/piasooriy/pias-bookstore).
+The project is deployed on [Netlify](https://dreamy-licorice-22c442.netlify.app/) and the source code can be found on [Github](https://github.com/piasooriy/pias-bookstore). CMS can be found on [Sanity] (https://piasbookstore.sanity.studio/book)
 
 ## Built with
 - HTML
