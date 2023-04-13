@@ -38,3 +38,18 @@ Plan for the week:
 *Camilla -> Make click to bookpage
 *Pia -> Style the author page
 *Together -> Style the bookpage
+
+||2023-04-13||
+
+Attendees: Effie, Camilla && Pia
+Notes: Today we went through what we did since last tuesday. 
+* Effie -> Added Space between menu buttons when scaling down. 
+* Camilla -> Worked on search function
+* Pia -> styled the author page, tried implementing "Sigleton-schema"
+
+Plan before D-Day: 
+* Effie - > work on adding margin/padding to make the cards
+neater. 
+* Camilla -> work on extracting the search function out 
+of book-list into a new module. 
+* Pia -> Add more books and authors, and bug fixes
