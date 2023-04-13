@@ -9,15 +9,20 @@ export default async function bookList () {
 		price,
 	}`;
 
+	// Fetch books from the sanity database using query
 	const books = await sanity.fetch(query);
 
+	// Create the DOM elements to display the data
 	function createBookListContainerDOM() {
+
+		// Create the container element and its children
 		const bookListContainer = document.createElement('div');
 			bookListContainer.className = 'book-list';
 
 		const searchContainer = document.createElement('div');
 			searchContainer.className = 'book-list__search';
 
+		// Create an input-element for the search-bar and set the attributes
 		const searchInput = document.createElement('input');
 			searchInput.className = 'book-list__search-input';
 			searchInput.id = 'search';
@@ -26,6 +31,7 @@ export default async function bookList () {
 			searchInput.placeholder = 'Search by title or author';
 			searchInput.autocomplete = 'on';
 
+		// Create the buttons in the search-bar
 		const searchButton = document.createElement('button');
 			searchButton.className = 'book-list__search-button';
 			searchButton.innerText = 'Search';
@@ -38,16 +44,22 @@ export default async function bookList () {
 		searchContainer.appendChild(emptySearchButton);
 		searchContainer.appendChild(searchButton);
 
+		// Add the search-bar to the bookListContainer
 		bookListContainer.appendChild(searchContainer);
 
+		// Create the container for the search-results
 		const bookResultsContainer = document.createElement('div');
 			bookResultsContainer.className = 'book-list__results';
 			bookListContainer.appendChild(bookResultsContainer);
 
 
+		// Update the book-results based on the search-query
 		function updateBookList(searchQuery) {
+			// Clear the previous search-result
 			bookResultsContainer.innerHTML = '';
 
+
+			// Get the filtered books based on the search-query
 			let filteredBooks;
 				if(!searchQuery) {
 					filteredBooks = books;
@@ -59,6 +71,9 @@ export default async function bookList () {
 					return title.includes(query) || author.includes(query);
 				});
 			}
+
+			// Display the search-results
+			// If there are no filtered books, add a message to the book-results
 			if (filteredBooks.length === 0) {
 				const noResults = document.createElement('p');
 					noResults.innerText = 'No books found';
@@ -86,7 +101,8 @@ export default async function bookList () {
 			
 						bookCover.className= 'book-cover';
 						bookCover.src = book.bookCover;
-						bookCover.alt = book.bookAlt || book.title; //use the bookTitle as alt if bookAlt is not to be found
+						// Use the bookTitle as book.alt if bookAlt is not to be found
+						bookCover.alt = book.bookAlt || book.title; 
 			
 						bookTitle.className= 'book-title';
 						bookTitle.innerText = book.title;
@@ -103,7 +119,8 @@ export default async function bookList () {
 			}
 		}
 
-		// debounce-function to limit the amount of times the method can be called
+		// Debounce-function to limit the amount of times the method can be called
+		// https://www.freecodecamp.org/news/javascript-debounce-example/
 		function debounce(func, delay) {
 			let timeoutId;
 			return function (...args) {
@@ -133,7 +150,6 @@ export default async function bookList () {
 			}
 		});
 
-
 		emptySearchButton.addEventListener('click', () => {
 			searchInput.value = '';
 			updateBookList('');
@@ -144,6 +160,8 @@ export default async function bookList () {
 		return bookListContainer;
 	}
 
+
+	// This function renders/updats the needed HTML DOM elements
 	function renderHTML (){
 		const bookListContainer = createBookListContainerDOM();
 		document.body.appendChild(bookListContainer);
