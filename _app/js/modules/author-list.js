@@ -9,9 +9,9 @@ export default async function authorList(){
 		  dateOfBirth, 
 		  dateOfPassing, 
 		  description, 
-		  "AltText": image.alt,  
-		  "Picture": image.asset->url,
-		  "Book": *[_type == 'book' && references(^._id)].title,   
+		  "altText": image.alt,  
+		  "picture": image.asset->url,
+		  "book": *[_type == 'book' && references(^._id)].title,   
 		}`;
 
 		const authors = await sanity.fetch(query);
@@ -45,8 +45,8 @@ export default async function authorList(){
 				authorBox.classname = 'author__cover-box';
 
 				authorImage.className = 'author__picture';
-				authorImage.src = author.Picture;
-				authorImage.alt = author.AltText;
+				authorImage.src = author.picture;
+				authorImage.alt = author.altText;
 
 				authorDescription.className = 'author__description';
 				authorDescription.innerText = author.description;
@@ -58,7 +58,7 @@ export default async function authorList(){
 				authorPassingDate.innerText = author.dateOfPassing;
 
 				authorBook.className = 'author__book';
-				authorBook.innerText = ` ${author.Book}`;
+				authorBook.innerText = ` ${author.book}`;
 				console.log(authorBook)
 
 				authorName.className = 'author__name-full';

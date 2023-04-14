@@ -127,6 +127,7 @@ export default async function bookList () {
 				if (timeoutId) {
 					clearTimeout(timeoutId);
 				}
+				
 				timeoutId = setTimeout(() => {
 					func.apply(null, args);
 				}, delay);
